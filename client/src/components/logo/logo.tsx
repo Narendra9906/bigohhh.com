@@ -6,9 +6,9 @@ interface Props {
   variant?: 'primary' | 'secondary'
 }
 
-const Logo: FC<Props> = ({ variant }) => {
+const Logo: FC<Props> = ({ onClick, variant }) => {
   return (
-    <Box>
+    <Box onClick = {onClick} sx={{ cursor: onClick ? 'pointer' : 'default' }}>
       <a href="https://www.bigohhh.com/" style={{ textDecoration: 'none' }}>
       <Typography
         variant="h4"
